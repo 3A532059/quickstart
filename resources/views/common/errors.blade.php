@@ -1,9 +1,3 @@
-/**
- * Created by PhpStorm.
- * User: 陳姿婷
- * Date: 2018/10/19
- * Time: 下午 02:43
- */
 @if (count($errors) > 0)
     <!-- 表單錯誤清單 -->
     <div class="alert alert-danger">
