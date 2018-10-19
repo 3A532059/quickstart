@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function ()
+{
     return view('welcome');
     //顯示我們所有任務的清單
     Route::get('/', function () {
@@ -39,24 +40,24 @@ Route::get('/', function () {
                 ->withInput()
                 ->withErrors($validator);
         }
+
+
+        // 建立該任務...
         $task = new Task;
         $task->name = $request->name;
         $task->save();
         return redirect('/');
-
-        // 建立該任務...
         //新增任務存入DB的程式碼 (see next page)
     });
-
-});
-
-// 刪除任務
+    // 刪除任務
     Route::delete('/task/{task}', function (Task $task) {
         //
         $task->delete();
         return redirect('/');
-        });
-
     });
 
 });
+
+
+
+
